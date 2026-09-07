@@ -1,0 +1,41 @@
+{
+  "FileVersion": 3,
+  "Version": 2,
+  "VersionName": "0.2.1",
+  "FriendlyName": "MeshForge Toolset",
+  "Description": "Exposes MeshForge to agents through the Unreal toolset registry: list providers, author mesh definitions, generate, import and re-finish. Adapter only - it forwards to MeshForge and holds no pipeline logic. Removing it changes nothing about MeshForge.",
+  "Category": "Automation Forge",
+  "CreatedBy": "Bojan Andrejek",
+  "CreatedByURL": "https://kovati.dev",
+  "DocsURL": "https://github.com/AutomationForgeHQ/MeshForgeToolset",
+  "MarketplaceURL": "",
+  "SupportURL": "https://github.com/AutomationForgeHQ/MeshForgeToolset/issues",
+  "EditorOnly": true,
+  "CanContainContent": false,
+  "IsBetaVersion": false,
+  "IsExperimentalVersion": true,
+  "EnabledByDefault": false,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "MeshForgeToolset",
+      "Type": "Editor",
+      "LoadingPhase": "PostEngineInit",
+      "TargetAllowList": [
+        "Editor"
+      ]
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "MeshForge",
+      "Enabled": true,
+      "Comment": "The pipeline this exposes. Nothing here works without it."
+    },
+    {
+      "Name": "ToolsetRegistry",
+      "Enabled": true,
+      "Comment": "The registry agents read. Deliberately not ModelContextProtocol - MCP is one transport over this registry, and depending on it would be backwards."
+    }
+  ]
+}
