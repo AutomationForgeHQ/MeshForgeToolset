@@ -2,7 +2,7 @@
 
 Exposes [MeshForge](https://github.com/AutomationForgeHQ/MeshForge) to agents through the Unreal toolset registry.
 
-**Version 0.2.1. Experimental.**
+**Version 0.2.2. Experimental.**
 
 An adapter and nothing more. Every tool forwards to `UMeshForgeSubsystem`, which owns the pipeline;
 deleting this plugin changes nothing about how MeshForge behaves.
