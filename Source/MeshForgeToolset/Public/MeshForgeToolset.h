@@ -85,7 +85,7 @@ class MESHFORGETOOLSET_API UMeshForgeToolset : public UToolsetDefinition
 
 public:
 
-	virtual FString GetToolsetVersion() const override { return TEXT("0.0.1"); }
+	virtual FString GetToolsetVersion() const override { return TEXT("0.2.2"); }
 
 	// ---------------------------------------------------------------------------------------------
 	// Discovery
